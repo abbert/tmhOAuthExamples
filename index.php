@@ -82,8 +82,8 @@ $current_demo = current_demo($demos);
   </div>
 
   <div id="demo">
-  <?php if ($path = $demos[$current_demo]) :
-    include $path;
+  <?php if (!empty($demos[$current_demo])) :
+    include $demos[$current_demo];
   else : ?>
     <p>Select a demo from the list.</p>
   <?php endif; ?>
